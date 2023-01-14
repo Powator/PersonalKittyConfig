@@ -2,11 +2,12 @@
     
 sudo su
 usermod --shell /usr/bin/zsh powa
+usermod --shell /usr/bin/zsh root
 
 
     2. Configuramos el .zshrc, borramos todo y pegamos esto:
     
-cd ~/.zshrc
+nano ~/.zshrc
 
     y pegamos hasta la linea 140 es el codigo:
 
@@ -77,7 +78,7 @@ alias cat='bat'
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plusgins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-sudo/sudo.plugin.zsh
 
 # Functions
@@ -153,6 +154,8 @@ sudo pacman -S paru
     
 paru -S zsh-syntax-highlighting zsh-autosuggestions
 
+o en Debian con apt install
+
     5. Instalamos locate
     
 sudo pacman -S locate
@@ -188,7 +191,7 @@ rm Hack.zip
 
     10. Ahora ya nos metemos con la kitty
     
-nano /.config/kitty/kitty.conf
+nano ~/.config/kitty/kitty.conf
 
     y pegamos esto
 
@@ -197,7 +200,7 @@ enable_audio_bell no
 include color.ini
 
 font_family      HackNerdFonts
-font_size 11
+font_size 13
 
 disable_ligatures never
 
@@ -211,7 +214,7 @@ map f3 copy_to_buffer b
 map f4 paste_from_buffer b
 
 cursor_shape beam
-cursor_beam_thickness 1.8
+cursor_beam_thickness 1.9
 
 shell zsh
     
